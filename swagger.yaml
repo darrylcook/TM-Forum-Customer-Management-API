@@ -224,7 +224,7 @@ paths:
             type: array
           examples:
             application/json:         
-              - href: https://api.sse.co.uk/customer/CUST01
+              - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
                 id: "CUST01"
                 name: Mr Proof of Concept 1
                 status: Active
@@ -234,7 +234,7 @@ paths:
                   startDateTime: "2005-10-16T23:11:32.323Z"
                 engagedParty:
                   description: "Engagement"
-                  href: https://sse.api.co.uk/Customer/ENG001
+                  href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/ENG001
                   id: ENG001
                   name: "Mr Engaged"
                 account:
