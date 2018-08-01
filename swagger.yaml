@@ -224,8 +224,8 @@ paths:
             type: array
           examples:
             application/json:         
-              - href: https://api.sse.co.uk/customer/10001
-                id: "10001"
+              - href: https://api.sse.co.uk/customer/CUST01
+                id: "CUST01"
                 name: Mr Proof of Concept 1
                 status: Active
                 statusReason: Active Account Customer
