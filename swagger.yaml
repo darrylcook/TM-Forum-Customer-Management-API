@@ -278,6 +278,14 @@ paths:
                   characteristic:
                     name: "phone number"
                     value: "02392 998776"
+                - preferred: false
+                  type: "work phone"
+                  validFor:
+                    endDateTime: "9999-99-99T00:00:00.000Z"
+                    startDateTime: "2005-10-16T23:11:32.323Z"
+                  characteristic:
+                    name: "phone number"
+                    value: "02392 444123"
                   
                   
 
