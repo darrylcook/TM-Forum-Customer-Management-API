@@ -6,7 +6,7 @@ info:
     specification
   version: '3.0'
 host: biologeek.orange-labs.fr
-basePath: /tmf-api/customerManagement
+basePath: /customerManagement
 schemes:
   - https
 consumes:
@@ -221,76 +221,64 @@ paths:
           schema:
             items:
               $ref: '#/definitions/Customer'
-            type: array
           examples:
             application/json:         
-              - href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
-                id: "CUST01"
-                name: Mr Proof of Concept 1
-                status: Active
-                statusReason: Active Account Customer
-                validFor: 
+              href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/CUST01
+              id: "CUST01"
+              name: Dr P Brahms
+              status: Active
+              statusReason: Active Account Customer
+              validFor: 
+                endDateTime: "9999-99-99T00:00:00.000Z"
+                startDateTime: "2005-10-16T23:11:32.323Z"
+              engagedParty:
+                description: "Engagement"
+                href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/ENG001
+                id: ENG001
+                name: "Mr Engaged"
+              account:
+              - description: "Electricity Supply"
+                href: https://api.sse.co.uk/account/ACC01
+                id: "907334887"
+                name: "ELECTRICITY"
+              - description: "Central Heating Maintenance"
+                href: https://api.sse.co.uk/account/ACC02
+                id: "778990123"
+                name: "BOILERCOVER"
+              paymentMethod:
+              - href: https://api.sse.co.uk/paymentMethod/PAY01
+                id: PAY01
+                name: "Direct Debit"
+              - href: https://api.sse.co.uk/paymentMethod/PAY02
+                id: PAY02
+                name: "Paypal"
+              contactMedium:
+              - preferred: true
+                type: "Email"
+                validFor:
                   endDateTime: "9999-99-99T00:00:00.000Z"
                   startDateTime: "2005-10-16T23:11:32.323Z"
-                engagedParty:
-                  description: "Engagement"
-                  href: https://api.ccm-dev.sse.co.uk:9022/CustomerManagement/Customer/ENG001
-                  id: ENG001
-                  name: "Mr Engaged"
-                account:
-                - description: "Electricity"
-                  href: https://api.sse.co.uk/account/ACC01
-                  id: ACC01
-                  name: "ELECTRICITY"
-                - description: "Boiler Cover"
-                  href: https://api.sse.co.uk/account/ACC02
-                  id: ACC02
-                  name: "BOILERCOVER"
-                paymentMethod:
-                - href: https://api.sse.co.uk/paymentMethod/PAY01
-                  id: PAY01
-                  name: "Direct Debit"
-                - href: https://api.sse.co.uk/paymentMethod/PAY02
-                  id: PAY02
-                  name: "Paypal"
-                contactMedium:
-                - preferred: true
-                  type: "email"
-                  validFor:
-                    endDateTime: "9999-99-99T00:00:00.000Z"
-                    startDateTime: "2005-10-16T23:11:32.323Z"
-                  characteristic:
-                    name: "emailaddress"
-                    value: "business.services@sse.com"
-                - preferred: false
-                  type: "sms"
-                  validFor:
-                    endDateTime: "9999-99-99T00:00:00.000Z"
-                    startDateTime: "2005-10-16T23:11:32.323Z"
-                  characteristic:
-                    name: "mobilenumber"
-                    value: "07944889977"
-                - preferred: false
-                  type: "home phone"
-                  validFor:
-                    endDateTime: "9999-99-99T00:00:00.000Z"
-                    startDateTime: "2005-10-16T23:11:32.323Z"
-                  characteristic:
-                    name: "phone number"
-                    value: "02392 998776"
-                - preferred: false
-                  type: "work phone"
-                  validFor:
-                    endDateTime: "9999-99-99T00:00:00.000Z"
-                    startDateTime: "2005-10-16T23:11:32.323Z"
-                  characteristic:
-                    name: "phone number"
-                    value: "02392 444123"
-                  
-                  
-
-
-
+                characteristic:
+                  name: "emailaddress"
+                  value: "test6.mymail.com"
+              - preferred: false
+                type: "Mobile"
+                validFor:
+                  endDateTime: "9999-99-99T00:00:00.000Z"
+                  startDateTime: "2005-10-16T23:11:32.323Z"
+                characteristic:
+                  name: "mobilenumber"
+                  value: "074 2104249"
+              - preferred: false
+                type: "Home"
+                validFor:
+                  endDateTime: "9999-99-99T00:00:00.000Z"
+                  startDateTime: "2005-10-16T23:11:32.323Z"
+                characteristic:
+                  name: "phone number"
+                  value: "01324 9845"
+          
+   
         '400':
           description: Bad Request
           schema:
